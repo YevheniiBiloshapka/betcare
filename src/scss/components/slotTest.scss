@@ -1,10 +1,12 @@
 .slotMachine {
   padding: 128px 0;
   background: #1B1B1B;
+
   &__container {
     max-width: 1488px;
   }
 }
+
 .slotTest {
   display: none;
   position: relative;
@@ -13,18 +15,22 @@
   overflow-x: visible;
   overflow-y: clip;
   box-shadow: var(--outer-shadow);
+
   &.active {
     display: block;
   }
+
   .gradient {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-}
-  .top  {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .top {
     top: 0;
   }
-  .bottom  {
+
+  .bottom {
     bottom: 0;
     transform: rotate(180deg);
   }
@@ -37,8 +43,9 @@
   display: flex;
   gap: 25px;
   justify-content: space-between;
-  &.active{
-    .reel{
+
+  &.active {
+    .reel {
       &.active {
         max-width: 246px;
         width: 100%;
@@ -46,7 +53,8 @@
         position: relative;
         z-index: 100;
         filter: brightness(1);
-        img.preview-img{
+
+        img.preview-img {
           border-radius: 26px;
           border: 2px solid #FFBC3B;
           box-shadow: 0px 0px 30px 8px rgba(255, 145, 43, 0.20), 0px 0px 12px 0px rgba(228, 16, 135, 0.60);
@@ -55,6 +63,7 @@
     }
   }
 }
+
 .win-text {
   display: none;
   position: absolute;
@@ -62,7 +71,7 @@
   top: 104px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: Duplet;
+
   font-weight: 600;
   font-size: 66px;
   line-height: 72px;
@@ -71,6 +80,7 @@
   @include media(1768) {
     font-size: 55px;
   }
+
   &.active {
     display: block;
   }
@@ -106,10 +116,12 @@ ul.reels {
   filter: brightness(0.7);
   padding: 0 0 25px;
   transform: translateY(-110px);
-  &:last-child{
+
+  &:last-child {
     padding: 0;
   }
 }
+
 .reel img {
   display: block;
   margin: auto;

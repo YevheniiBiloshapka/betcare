@@ -478,7 +478,6 @@ sup {
 .desktop-menu__title {
   position: relative;
   display: inline;
-  font-family: Duplet;
   white-space: nowrap;
   font-size: 24px;
   font-weight: 400;
@@ -505,7 +504,6 @@ sup {
   margin-top: 32px;
 }
 .desktop-menu__link {
-  font-family: Duplet;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -648,7 +646,6 @@ sup {
   height: max-content;
 }
 .mobile-menu__link {
-  font-family: Duplet;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -855,7 +852,6 @@ sup {
 .fullpage-section__title {
   color: #fff;
   text-align: center;
-  font-family: Duplet;
   font-size: 90px;
   font-style: normal;
   font-weight: 600;
@@ -907,7 +903,6 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Duplet;
   font-size: 90px;
   font-style: normal;
   font-weight: 600;
@@ -938,7 +933,6 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Duplet;
   font-size: 90px;
   font-style: normal;
   font-weight: 600;
@@ -969,7 +963,6 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Duplet;
   font-size: 90px;
   font-style: normal;
   font-weight: 600;
@@ -1000,7 +993,6 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Duplet;
   font-size: 90px;
   font-style: normal;
   font-weight: 600;
@@ -1168,7 +1160,6 @@ sup {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Duplet;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -2729,7 +2720,6 @@ sup {
   background: linear-gradient(90deg, #FFBC3B 56.79%, #FF6051 77.77%, #FF4AB0 98.75%, #FF4AAC 98.75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Duplet;
   font-size: 44px;
   font-style: normal;
   font-weight: 600;
@@ -2753,7 +2743,6 @@ sup {
   background: #FFF;
   color: #1B1B1B;
   text-align: center;
-  font-family: Duplet;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -4073,6 +4062,9 @@ sup {
   margin: 32px 0;
   position: relative;
 }
+.cta-swiper .accordion {
+  padding-bottom: 24px;
+}
 .cta-swiper li {
   display: flex;
   flex-direction: column;
@@ -4598,7 +4590,6 @@ sup {
   padding: 0 20px;
   transition: all 0.3s ease-in-out;
   color: var(--Gray-1, #333);
-  font-family: Duplet;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -4667,7 +4658,6 @@ sup {
   top: 104px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: Duplet;
   font-weight: 600;
   font-size: 66px;
   line-height: 72px;

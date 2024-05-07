@@ -1032,6 +1032,9 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
   margin: 32px 0;
   position: relative;
   //max-width: 700px;
+  & .accordion {
+    padding-bottom: 24px;
+  }
 
   & li {
     display: flex;
