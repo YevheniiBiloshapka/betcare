@@ -64,6 +64,13 @@
   background: linear-gradient(90deg, rgba(255, 155, 60, 0.80) 0.1%, rgba(255, 79, 64, 0.80) 50%, rgba(219, 50, 120, 0.80) 99.9%) padding-box,
   linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
 
+  &.resend-email {
+    background: #353535;
+
+    &:hover {
+      background: #403F3F;
+    }
+  }
 
   color: #F5F5F5;
   @include font(16px, 600, 100%);
@@ -90,10 +97,33 @@
 
   &-title {
     color: #FFF;
-
+    text-align: center;
     @include font(50px, 600, 120%);
     letter-spacing: 0.5px;
     margin-bottom: 32px;
+  }
+
+  &-desc {
+    color: #FFF;
+    text-align: center;
+
+    @include font(16px, 400, 150%);
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+
+    & span {
+      color: #FFF;
+    }
+  }
+
+  &.forgot-pass-form, &.new-password-pass {
+    & .login-modal__box-title {
+      color: #FFF;
+      @include font(24px, 600, 133.333%);
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
   }
 
   @media screen and (min-width: 744px) {
@@ -188,17 +218,18 @@
 
 
 .login-modal__box {
-  &.auth.active, &.sign-up.active, &.forgot-pass.active {
+  &.auth.active, &.sign-up.active, &.forgot-pass-form.active, &.new-password-pass.active {
     display: flex;
   }
 
-  &.auth, &.sign-up, &.forgot-pass {
+  &.auth, &.sign-up, &.forgot-pass-form, &.new-password-pass {
     display: none;
   }
 
 
 }
 
+// auth
 .login-modal__box.auth {
   & .password, & .forgot-pass, & .sign-in {
     display: none;
@@ -212,5 +243,13 @@
     & .login-modal__social-box, & .continue {
       display: none;
     }
+  }
+}
+
+//forgot pass form
+.login-modal__box.forgot-pass-form {
+
+  & .forgot-pass__send-email.is-hidden, & .forgot-pass__resend-email.is-hidden {
+    display: none;
   }
 }

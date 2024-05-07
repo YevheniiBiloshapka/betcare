@@ -263,7 +263,7 @@
   </div>
 </div>
 <!--login modal-->
-<div class="login-modal">
+<div class="is-hidden login-modal">
   <button class="login-modal--close-button">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M12 10.4L5.6 4L4 5.59997L10.4 12L4 18.4L5.6 19.9999L12 13.6L18.4 20L20 18.4L13.6 12L20 5.59997L18.4 4L12 10.4Z" fill="white"/>
@@ -364,9 +364,8 @@
     </div>
   </div>
 
-
   <!-- ! Sign Up form -->
-  <div id="sign-up-form" class="sign-up login-modal__box">
+  <div id="sign-up-form" class="login-modal__box sign-up">
     <p class="login-modal__box-title">Welcome</p>
     <!--! login form-->
     <form class="login-modal__auth-form">
@@ -450,19 +449,67 @@
   </div>
 
   <!-- ! forgot pass form -->
-  <div id="forgot-pass-form" class="sign-up login-modal__box">
-    <p class="login-modal__box-title">forgot pass</p>
-    <!--! login form-->
+  <div id="forgot-pass-form" class="login-modal__box forgot-pass-form">
+    <!--    ! forgot-pass form send email-->
+    <div id="forgot-send-email" class="forgot-pass__send-email">
+      <p class="login-modal__box-title">Reset your password</p>
+      <p class="login-modal__box-desc">Enter your email address and we will send you instructions to reset your
+        password.</p>
+      <!--! email form-->
+      <form class="login-modal__auth-form">
+        <!--  !    email-->
+        <div class="input">
+          <input required="" type="text" id="emailForgotPass" name="emailSignup" autocomplete="off" class="input-field">
+          <label for="emailForgotPass" class="input-label">Your e-mail address</label>
+        </div>
+        <!-- !    button Continue-->
+        <button id="forgot-pass-sent-email" type="button" class="login-button continue">
+          Continue
+        </button>
+      </form>
+    </div>
+    <!--    ! forgot-pass Resend email-->
+    <div id="forgot-resend-email" class="is-hidden forgot-pass__resend-email">
+      <p class="login-modal__box-title">Check Your Email</p>
+      <p class="login-modal__box-desc">Please check the email address <span>[********]@gmail.com </span>for instructions
+        to reset your
+        password.</p>
+      <button id="resend-email" type="button" class="login-button resend-email">
+        Resend e-mail
+      </button>
+    </div>
+  </div>
+
+  <!-- ! new password -->
+  <div id="new-password-form" class="login-modal__box new-password-pass">
+
+    <p class="login-modal__box-title">New password</p>
+    <p class="login-modal__box-desc">Please create your new password.</p>
+
     <form class="login-modal__auth-form">
-      <!--  !    email-->
-      <div class="input">
-        <input required="" type="text" id="emailForgotPass" name="emailSignup" autocomplete="off" class="input-field">
-        <label for="emailForgotPass" class="input-label">Your e-mail address</label>
-      </div>
+
       <!--  !    password-->
-      <!-- !    button Continue-->
-      <button type="button" class="login-button Continue">
-        Sign Up
+      <div class="input password">
+        <input required="" type="password" id="newPassword" name="new password" autocomplete="off" class="input-field">
+        <label for="newPassword" class="input-label">New password</label>
+        <svg class="active password-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M0.666626 7.99999C0.666626 7.99999 3.33329 2.66666 7.99996 2.66666C12.6666 2.66666 15.3333 7.99999 15.3333 7.99999C15.3333 7.99999 12.6666 13.3333 7.99996 13.3333C3.33329 13.3333 0.666626 7.99999 0.666626 7.99999Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="password-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <g clip-path="url(#clip0_11851_6968)">
+            <path d="M11.96 11.96C10.8204 12.8287 9.43276 13.3099 8.00002 13.3333C3.33335 13.3333 0.666687 8.00001 0.666687 8.00001C1.49595 6.4546 2.64611 5.10441 4.04002 4.04001M6.60002 2.82667C7.05891 2.71926 7.52873 2.66557 8.00002 2.66667C12.6667 2.66667 15.3334 8.00001 15.3334 8.00001C14.9287 8.75708 14.4461 9.46983 13.8934 10.1267M9.41335 9.41334C9.23025 9.60984 9.00945 9.76744 8.76412 9.87676C8.51879 9.98607 8.25395 10.0448 7.98541 10.0496C7.71687 10.0543 7.45013 10.0049 7.20109 9.90433C6.95206 9.80374 6.72583 9.65403 6.53592 9.46411C6.346 9.27419 6.19628 9.04797 6.09569 8.79893C5.9951 8.5499 5.9457 8.28315 5.95044 8.01461C5.95518 7.74607 6.01396 7.48124 6.12327 7.23591C6.23258 6.99057 6.39019 6.76977 6.58669 6.58667" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0.666687 0.666656L15.3334 15.3333" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_11851_6968">
+              <rect width="16" height="16" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <button id="confirm-new-pass" type="button" class="login-button confirm">
+        Confirm
       </button>
     </form>
   </div>
@@ -472,18 +519,12 @@
 
 
   document.addEventListener('DOMContentLoaded', function() {
-    const logInButton = document.querySelector('.menu__buttons--login');
-    const authModalButtonClose = document.querySelector('.login-modal--close-button');
-    const loginModal = document.querySelector('.login-modal');
     const passwordInputs = document.querySelectorAll('input[type="password"]');
-    const togglePasswordIcons = document.querySelectorAll('.password-toggle-icon');
-
-
     // !toggle password
     passwordInputs.forEach(passwordInput => {
       const togglePasswordIcons = passwordInput.parentNode.querySelectorAll('.password-toggle-icon');
 
-      
+
       togglePasswordIcons.forEach(icon => {
         icon.addEventListener('click', function() {
           if (passwordInput.type === 'password') {
@@ -497,27 +538,31 @@
         });
       });
     });
-
-    //!  toggle modal auth
-    function toggleModal() {
-      loginModal.classList.toggle('is-hidden');
-    }
-
-    logInButton.addEventListener('click', toggleModal);
-    authModalButtonClose.addEventListener('click', toggleModal);
   });
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // modal
+    const logInButton = document.querySelector('.menu__buttons--login');
+    const authModalButtonClose = document.querySelector('.login-modal--close-button');
+    const loginModal = document.querySelector('.login-modal');
+
+
     // * change form buttons
     const signUpChangeFormButton = document.getElementById('sign-up-change-form');
     const logInChangeFormButton = document.getElementById('auth-change-form');
     const forgotPassChangeFormButton = document.getElementById('forgot-pass-change-form');
+    const forgotPassSentEmailButton = document.getElementById('forgot-pass-sent-email');
+    const resendEmailButton = document.getElementById('resend-email');
 
     // * form box
     const logInFormBox = document.getElementById('auth-form');
     const signUpFormBox = document.getElementById('sign-up-form');
     const forgotPassFormBox = document.getElementById('forgot-pass-form');
+
+    const forgotSentEmail = document.getElementById('forgot-send-email');
+    const forgotResendEmail = document.getElementById('forgot-resend-email');
+    const newPasswordForm = document.getElementById('new-password-form');
     // other
     const emailInputLogIn = document.getElementById('emailLogin');
     const continueButtonLogIn = document.getElementById('log-in-continue');
@@ -529,7 +574,6 @@
         logInFormBox.classList.add('is-hidden');
       }
     });
-
 
     // Key click handler "Login"
     logInChangeFormButton.addEventListener('click', function() {
@@ -551,8 +595,40 @@
       logInFormBox.classList.remove('active');
       signUpFormBox.classList.remove('active');
     });
-  });
 
+    // !  forgot pass
+    forgotPassSentEmailButton.addEventListener('click', function() {
+      forgotSentEmail.classList.add('is-hidden');
+      forgotResendEmail.classList.remove('is-hidden');
+    });
+
+    //   change resend email to new-password
+    resendEmailButton.addEventListener('click', function() {
+      newPasswordForm.classList.add('active');
+      forgotPassFormBox.classList.remove('active');
+    });
+
+
+    //  toggle modal
+    //!  toggle modal auth
+    function toggleModal() {
+      loginModal.classList.toggle('is-hidden');
+
+      forgotSentEmail.classList.remove('is-hidden');
+      logInFormBox.classList.remove('is-hidden');
+
+      newPasswordForm.classList.remove('active');
+      forgotPassFormBox.classList.remove('active');
+      signUpFormBox.classList.remove('active');
+
+      forgotResendEmail.classList.add('is-hidden');
+      logInFormBox.classList.add('active');
+
+    }
+
+    logInButton.addEventListener('click', toggleModal);
+    authModalButtonClose.addEventListener('click', toggleModal);
+  });
 </script>
 <main class="page">
   <section class="first fullpage-section">

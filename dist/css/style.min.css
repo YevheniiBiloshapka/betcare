@@ -4351,6 +4351,12 @@ input:-webkit-autofill:focus {
   line-height: 100%;
   letter-spacing: 0.5px;
 }
+.login-button.resend-email {
+  background: #353535;
+}
+.login-button.resend-email:hover {
+  background: #403F3F;
+}
 .login-modal__box {
   position: absolute;
   top: 88px;
@@ -4364,11 +4370,32 @@ input:-webkit-autofill:focus {
 }
 .login-modal__box-title {
   color: #FFF;
+  text-align: center;
   font-size: 50px;
   font-weight: 600;
   line-height: 120%;
   letter-spacing: 0.5px;
   margin-bottom: 32px;
+}
+.login-modal__box-desc {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
+}
+.login-modal__box-desc span {
+  color: #FFF;
+}
+.login-modal__box.forgot-pass-form .login-modal__box-title, .login-modal__box.new-password-pass .login-modal__box-title {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 133.333%;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 744px) {
   .login-modal__box {
@@ -4453,10 +4480,10 @@ input:-webkit-autofill:focus {
   }
 }
 
-.login-modal__box.auth.active, .login-modal__box.sign-up.active, .login-modal__box.forgot-pass.active {
+.login-modal__box.auth.active, .login-modal__box.sign-up.active, .login-modal__box.forgot-pass-form.active, .login-modal__box.new-password-pass.active {
   display: flex;
 }
-.login-modal__box.auth, .login-modal__box.sign-up, .login-modal__box.forgot-pass {
+.login-modal__box.auth, .login-modal__box.sign-up, .login-modal__box.forgot-pass-form, .login-modal__box.new-password-pass {
   display: none;
 }
 
@@ -4467,6 +4494,10 @@ input:-webkit-autofill:focus {
   display: flex;
 }
 .login-modal__box.auth.is-hidden .login-modal__social-box, .login-modal__box.auth.is-hidden .continue {
+  display: none;
+}
+
+.login-modal__box.forgot-pass-form .forgot-pass__send-email.is-hidden, .login-modal__box.forgot-pass-form .forgot-pass__resend-email.is-hidden {
   display: none;
 }
 
