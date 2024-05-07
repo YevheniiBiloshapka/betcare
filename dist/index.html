@@ -263,7 +263,7 @@
   </div>
 </div>
 <!--login modal-->
-<div class="is-hidden login-modal">
+<div class="login-modal">
   <button class="login-modal--close-button">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M12 10.4L5.6 4L4 5.59997L10.4 12L4 18.4L5.6 19.9999L12 13.6L18.4 20L20 18.4L13.6 12L20 5.59997L18.4 4L12 10.4Z" fill="white"/>
@@ -284,7 +284,7 @@
       <div class="input password">
         <input required="" type="password" id="password" name="password" autocomplete="off" class="input-field">
         <label for="password" class="input-label">Password</label>
-        <svg class="active password-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <svg class="password-toggle-icon active" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M0.666626 7.99999C0.666626 7.99999 3.33329 2.66666 7.99996 2.66666C12.6666 2.66666 15.3333 7.99999 15.3333 7.99999C15.3333 7.99999 12.6666 13.3333 7.99996 13.3333C3.33329 13.3333 0.666626 7.99999 0.666626 7.99999Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -378,7 +378,7 @@
       <div class="input password">
         <input required="" type="password" id="passwordSignUp" name="passwordSignUp" autocomplete="off" class="input-field">
         <label for="passwordSignUp" class="input-label">Password</label>
-        <svg class="active password-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <svg class="password-toggle-icon active" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M0.666626 7.99999C0.666626 7.99999 3.33329 2.66666 7.99996 2.66666C12.6666 2.66666 15.3333 7.99999 15.3333 7.99999C15.3333 7.99999 12.6666 13.3333 7.99996 13.3333C3.33329 13.3333 0.666626 7.99999 0.666626 7.99999Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -469,7 +469,7 @@
       </form>
     </div>
     <!--    ! forgot-pass Resend email-->
-    <div id="forgot-resend-email" class="is-hidden forgot-pass__resend-email">
+    <div id="forgot-resend-email" class="forgot-pass__resend-email is-hidden">
       <p class="login-modal__box-title">Check Your Email</p>
       <p class="login-modal__box-desc">Please check the email address <span>[********]@gmail.com </span>for instructions
         to reset your
@@ -492,7 +492,7 @@
       <div class="input password">
         <input required="" type="password" id="newPassword" name="new password" autocomplete="off" class="input-field">
         <label for="newPassword" class="input-label">New password</label>
-        <svg class="active password-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <svg class="password-toggle-icon active" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M0.666626 7.99999C0.666626 7.99999 3.33329 2.66666 7.99996 2.66666C12.6666 2.66666 15.3333 7.99999 15.3333 7.99999C15.3333 7.99999 12.6666 13.3333 7.99996 13.3333C3.33329 13.3333 0.666626 7.99999 0.666626 7.99999Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="#727272" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -631,64 +631,80 @@
   });
 </script>
 <main class="page">
-  <section class="first fullpage-section">
-  <div class="fullpage-section__wrapper">
-    <img class="active fullpage-section__bg-img" src="./images/fullpages/first.webp" alt="">
-    <img class="fullpage-section__bg-img" src="./images/fullpages/second.webp" alt="">
-    <img class="fullpage-section__bg-img" src="./images/fullpages/third.webp" alt="">
-    <img class="fullpage-section__bg-img" src="./images/fullpages/fourth.webp" alt="">
-    <div>
-      <div class="fullpage-section__container">
-        <h1 class="fullpage-section__title">We care. You win.</h1>
-        <p class="fullpage-section__sub-title">
-          <span class="active">Personal VIP Concierge 24/7</span>
-          <span>Your Unique VIP Loyalty Program</span>
-          <span>Exclusive VIP Offers</span>
-          <span>Honest VIP Programs Reviews</span>
-        </p>
+  <section class="hero">
+  <div class="heroPageSwiper swiper">
+    <ul class="swiper-wrapper">
+      <!--      slide 1-->
+      <li class="swiper-slide hero__slide red">
+        <div class="hero__slide red">
+          <img class="hero__slide-img" src="./images/fullpages/first.webp" alt="">
 
-        <div class="fullpage-section__btns">
-          <div class="active fullpage-section__btn">
-            <a href="/">
-              <span class="background"></span>
-              <span>Let’s talk!</span>
-            </a>
+          <div class="hero__info-box">
+            <h1 class="hero__info-box--title">We care.You win.<br>
+              <span>Personal VIP Concierge 24/7</span>
+            </h1>
+            <a href="#" class="hero__info-box--button">Let’s talk!</a>
           </div>
-          <div class="fullpage-section__btn">
-            <a href="/">
-              <span class="background"></span>
-              <span>Activate Account</span>
-            </a>
-          </div>
-          <div class="fullpage-section__btn">
-            <a href="/">
-              <span class="background"></span>
-              <span>Exclusive Deals</span>
-            </a>
-          </div>
-          <div class="fullpage-section__btn">
-            <a href="/">
-              <span class="background"></span>
-              <span>VIP Reviews</span>
-            </a>
+
+          <div class="hero__scroll-button">
+            <p>Scroll</p>
+            <a class="hero__scroll-button-link" href="#services"><span></span></a>
           </div>
         </div>
 
+      </li>
+      <!--      slide 2-->
+      <li class="swiper-slide">
+        <div class="hero__slide purple">
+          <img class="hero__slide-img" src="./images/fullpages/second.webp" alt="">
 
-      </div>
-
-    </div>
-    <div class="fullpage-section__scroll-btn">
-      <p>Scroll</p>
-      <a href="#services">
-        <span class="active"></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
+          <div class="hero__info-box">
+            <h2 class="hero__info-box--title">We care.You win.<br>
+              <span>Your Unique VIP Loyalty Program</span>
+            </h2>
+            <a href="#" class="hero__info-box--button">Activate Account</a>
+          </div>
+          <div class="hero__scroll-button">
+            <p>Scroll</p>
+            <a class="hero__scroll-button-link" href="#services"><span></span></a>
+          </div>
+        </div>
+      </li>
+      <!--      slide 3-->
+      <li class="swiper-slide">
+        <div class="hero__slide orange"><img class="hero__slide-img" src="./images/fullpages/third.webp" alt="">
+          <div class="hero__info-box">
+            <h2 class="hero__info-box--title">We care.You win.<br>
+              <span>Exclusive VIP Offers</span>
+            </h2>
+            <a href="#" class="hero__info-box--button">Exclusive Deals</a>
+          </div>
+          <div class="hero__scroll-button">
+            <p>Scroll</p>
+            <a class="hero__scroll-button-link" href="#services"><span></span></a>
+          </div>
+        </div>
+      </li>
+      <!--      slide 4-->
+      <li class="swiper-slide">
+        <div class="hero__slide green"><img class="hero__slide-img" src="./images/fullpages/fourth.webp" alt="">
+          <div class="hero__info-box">
+            <h2 class="hero__info-box--title">We care.You win.<br>
+              <span>Honest VIP Programs Reviews</span>
+            </h2>
+            <a href="#" class="hero__info-box--button">VIP Reviews</a>
+          </div>
+          <div class="hero__scroll-button">
+            <p>Scroll</p>
+            <a class="hero__scroll-button-link" href="#services"><span></span></a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
+
+
   <section class="services">
   <!--  TODO: Phone-->
   <div id="services" class="styled-gallery-top">

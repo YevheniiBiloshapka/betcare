@@ -1,21 +1,5 @@
-import BaseHelpers from './helpers/BaseHelpers.js';
-import PopupManager from './modules/PopupManager';
-import BurgerMenu from './modules/BurgerMenu';
 import Accordion from './modules/Accordion.js';
-
 import { HeaderInit } from './modules/Header.js';
-
-BaseHelpers.checkWebpSupport();
-
-BaseHelpers.addTouchClass();
-
-BaseHelpers.addLoadedClass();
-
-BaseHelpers.headerFixed();
-
-new PopupManager();
-
-new BurgerMenu().init();
 
 new Accordion('.accordion', {
   shouldOpenAll: false,
