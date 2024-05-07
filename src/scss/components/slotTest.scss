@@ -1,0 +1,131 @@
+.slotMachine {
+  padding: 128px 0;
+  background: #1B1B1B;
+  &__container {
+    max-width: 1488px;
+  }
+}
+.slotTest {
+  display: none;
+  position: relative;
+  background: #1B1B1B;
+  margin: 0 auto;
+  overflow-x: visible;
+  overflow-y: clip;
+  box-shadow: var(--outer-shadow);
+  &.active {
+    display: block;
+  }
+  .gradient {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+  .top  {
+    top: 0;
+  }
+  .bottom  {
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+}
+
+#slot-screen {
+  height: 771px;
+  position: relative;
+  //overflow: hidden;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  &.active{
+    .reel{
+      &.active {
+        max-width: 246px;
+        width: 100%;
+        transform: scale(1.0602) translateY(-110px);
+        position: relative;
+        z-index: 100;
+        filter: brightness(1);
+        img.preview-img{
+          border-radius: 26px;
+          border: 2px solid #FFBC3B;
+          box-shadow: 0px 0px 30px 8px rgba(255, 145, 43, 0.20), 0px 0px 12px 0px rgba(228, 16, 135, 0.60);
+        }
+      }
+    }
+  }
+}
+.win-text {
+  display: none;
+  position: absolute;
+  z-index: 111;
+  top: 104px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Duplet;
+  font-weight: 600;
+  font-size: 66px;
+  line-height: 72px;
+  text-align: center;
+  color: #FFFFFF;
+  @include media(1768) {
+    font-size: 55px;
+  }
+  &.active {
+    display: block;
+  }
+}
+
+ul.reels {
+  //float: left;
+  height: 708px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+}
+
+
+//.reels:nth-child(1) {
+//  left: 0;
+//}
+//.reels:nth-child(2) {
+//  left: 26%;
+//}
+//.reels:nth-child(3) {
+//  left: 51%;
+//}
+//.reels:nth-child(4) {
+//  right: 0;
+//}
+
+.reel {
+  //margin-bottom: 25px;
+  filter: brightness(0.7);
+  padding: 0 0 25px;
+  transform: translateY(-110px);
+  &:last-child{
+    padding: 0;
+  }
+}
+.reel img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.stop-btn {
+  display: inline-block;
+  padding: 35px;
+  margin: 40px;
+  background-color: rgb(237 23 23);
+  border-bottom: solid 4px #627295;
+  border-right: 60px;
+}
+
+.stop-btn:hover {
+  background-color: rgb(21 199 15);
+  cursor: pointer;
+}

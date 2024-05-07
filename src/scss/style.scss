@@ -1,0 +1,41 @@
+@use "sass:math";
+
+@import "config/fonts";
+
+@import "config/vars";
+
+@import "config/functions";
+@import "config/mixins";
+@import "config/patternSelectors";
+
+@import "config/reset";
+
+@import "config/scrollbar";
+
+@import "config/base";
+
+// header footer
+@import "components/header";
+@import "components/footer";
+// blocks main
+@import "components/fullpage";
+@import "components/service";
+@import "components/vip";
+@import "components/slot";
+@import "components/reward";
+@import "components/cards";
+@import "components/features";
+@import "components/faq";
+
+// blocks cta
+@import "components/cta";
+
+// components
+@import "components/popup";
+@import "components/input";
+@import "components/login-modal";
+@import "components/tabs";
+@import "components/accordion";
+@import "components/slotTest";
+@import "libs/swiper";
+

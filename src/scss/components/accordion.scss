@@ -1,0 +1,117 @@
+.accordion {
+  $radius: 20;
+  $icon-size: 48;
+  position: relative;
+  @media screen and (min-width: 744px) {
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 20px;
+    box-shadow: 6px 6px 19px 0px rgba(148, 148, 148, 0.12);
+    border-radius: 20px;
+    @include media(1439) {
+      max-width: none;
+    }
+
+    &:not(:first-of-type) {
+      border-top: 0;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      margin-bottom: 0;
+    }
+
+    &.open {
+      border: 1px solid var(--Main-Gradient, #FFBC3B);
+
+      .accordion__header {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .accordion__content {
+        height: max-content;
+        padding: 20px;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px;
+    gap: 16px;
+    transition: background 0.3s ease-in-out;
+
+
+    &-text {
+      letter-spacing: 0.5px;
+      @include font(16px, 400, 24px);
+
+      @media screen and (min-width: 744px) {
+        letter-spacing: 0.5px;
+        @include font(24px, 600, 52px);
+      }
+    }
+
+    @include pseudocell(after, static) {
+      content: "";
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      $size: 40px;
+      min-width: $size;
+      width: $size;
+      height: $size;
+      max-height: $size;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 13.0913L17.4447 8L19 9.45436L12 16L5 9.45436L6.55531 8L12 13.0913Z' fill='%23C01760'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      transform: rotate(0deg);
+      border-radius: 100px;
+
+      border: 1px solid #FFD7E4;
+      transition: transform 0.6s ease-in-out;
+
+      @media screen and (min-width: 744px) {
+        $size: 48px;
+        min-width: $size;
+        width: $size;
+        height: $size;
+        max-height: $size;
+      }
+    }
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out;
+    color: var(--Gray-1, #333);
+    font-family: Duplet;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
+}

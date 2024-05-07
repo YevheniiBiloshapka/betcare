@@ -1,0 +1,211 @@
+.cards {
+  position: relative;
+  background-color: #1B1B1B;
+  padding: 80px 0 60px;
+  width: 100vw;
+  background-image: url("../../images/cards/gradienCarsdBg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media(1728) {
+    padding: 63px 0 60px;
+  }
+  @include media(767) {
+    padding: 48px 16px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1208px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    @media screen and (min-width: 744px) {
+      gap: 64px;
+    }
+    @media screen and (min-width: 1280px) {
+      gap: 64px;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    @include media(767) {
+      display: none;
+    }
+  }
+
+  &__gradient-mob {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    @include media(767) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    color: #FFF;
+    text-align: center;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0.5px;
+    @include media(767) {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+
+    span {
+      background: linear-gradient(90deg, #FFBC3B 56.79%, #FF6051 77.77%, #FF4AB0 98.75%, #FF4AAC 98.75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Duplet;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 54px;
+      letter-spacing: 0.5px;
+      @include media(767) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    width: fit-content;
+    height: 60px;
+    padding: 12px 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #FFF;
+    color: #1B1B1B;
+    text-align: center;
+    font-family: Duplet;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    @include media(1728) {
+      padding: 12px 32px;
+      height: 51px;
+    }
+  }
+}
+
+.cards__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 44px;
+  gap: -109px;
+
+  & li {
+    @include transition;
+  }
+
+  & li:hover {
+    z-index: 40;
+    transform: translateX(-20px);
+  }
+
+  & li:not(:first-child) {
+    margin-top: -100px;
+  }
+
+  @media screen and (min-width: 744px) {
+    & li:not(:first-child) {
+      margin-top: -130px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    & li {
+      transform: rotate(-15.011deg);
+
+
+      &:hover {
+        z-index: 40;
+        transform: rotate(-15.011deg) scale(1.02);
+        box-shadow: 3px 5px 46.3px 0px rgba(91, 7, 48, 0.72);
+      }
+    }
+    & li:not(:first-child) {
+      margin-top: 0;
+      margin-left: -115px;
+    }
+  }
+}
+
+.cards__card {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+
+  border-radius: 18.96px;
+  box-shadow: 3px 5px 15px 0px rgba(91, 7, 48, 0.40);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  width: 100%;
+  max-width: 414px;
+
+
+  &:hover {
+    z-index: 40;
+  }
+
+  &.active {
+    z-index: 2;
+
+  }
+
+  &.first {
+    z-index: 4;
+
+
+  }
+
+  &.second {
+    z-index: 3;
+
+
+  }
+
+  &.third {
+    z-index: 2;
+  }
+
+  &.fourth {
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 744px) {
+    border-radius: 24px;
+    height: auto;
+    width: 100%;
+    max-width: 414px;
+  }
+}

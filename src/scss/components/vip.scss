@@ -1,0 +1,317 @@
+.vip {
+  position: relative;
+  background: #1b1b1b;
+  width: 100vw;
+  padding: 86px 0;
+  @include media(1440) {
+    padding: 64px 0;
+  }
+  @include media(767) {
+    padding: 47px 0;
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1328px;
+    @include media(1440) {
+      justify-content: center;
+    }
+  }
+}
+
+.vip-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+  @include media(1440) {
+    margin-bottom: 32px;
+    flex-direction: column;
+  }
+
+  &__title {
+
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    background: linear-gradient(89.95deg, #3b5eff 25.36%, #a09eff 49.29%, #a838ff 73.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+    @include media(1440) {
+      text-align: center;
+      width: 39%;
+      margin: 0 auto;
+      margin-bottom: 12px;
+    }
+    @include media(1280) {
+      width: 45%;
+    }
+    @include media(1024) {
+      width: 65%;
+    }
+    @include media(767) {
+      width: 100%;
+    }
+    @include media(767) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__text {
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #a3a3a3;
+    @include media(1440) {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    @include media(767) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: linear-gradient(89.95deg, #b9b8f6 0.04%, #3d5dd2 50.5%, #5d1695 99.96%);
+    height: 64px;
+    max-width: 309px;
+    width: 100%;
+    @include media(1440) {
+      max-width: 256px;
+    }
+    @include media(767) {
+      height: 48px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      background: #1b1b1b;
+      color: #f5f5f5;
+      text-align: center;
+      border-radius: 100px;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      @include media(1440) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+      @include media(767) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      &:hover {
+        background: linear-gradient(89.95deg, #a2a1ec 0.04%, #4b6fed 47.81%, #962ee8 99.96%);
+      }
+    }
+  }
+}
+
+.vip-block {
+  display: flex;
+  gap: 48px;
+  @include media(1440) {
+    gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include media(1024) {
+    flex-direction: column;
+  }
+  @include media(767) {
+    padding: 16px;
+  }
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid #353535;
+    padding: 48px;
+    background: linear-gradient(93.17deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border 0.3s ease;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      background: radial-gradient(
+                      circle at var(--x) var(--y),
+                      #172b88 0%,
+                      #172b88 25%,
+                      hsla(0, 0%, 100%, 0) 50%,
+                      transparent 80%
+      );
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover::before {
+      opacity: 0.3;
+    }
+
+    &:nth-of-type(2)::before {
+      background: radial-gradient(
+                      circle at var(--x) var(--y),
+                      #364f6e 0%,
+                      #364f6e 25%,
+                      hsla(0, 0%, 100%, 0) 50%,
+                      transparent 80%
+      );
+    }
+
+    &:nth-of-type(3)::before {
+      background: radial-gradient(
+                      circle at var(--x) var(--y),
+                      #4a0c7a 0%,
+                      #4a0c7a 25%,
+                      hsla(0, 0%, 100%, 0) 50%,
+                      transparent 80%
+      );
+    }
+
+    @include media(1440) {
+      max-width: 334px;
+    }
+    @include media(1024) {
+      max-width: 410px;
+      padding: 32px;
+    }
+    @include media(767) {
+      padding: 16px;
+    }
+
+    .light {
+      display: none;
+      position: absolute;
+      left: -52px;
+      top: -52px;
+    }
+
+    &:hover {
+      .light {
+        display: block;
+      }
+    }
+
+    &:hover {
+      border: 1px solid #3b5eff80;
+      background: linear-gradient(
+                      105.31deg,
+                      rgba(59, 94, 255, 0.1) 0.98%,
+                      rgba(160, 158, 255, 0.1) 50.49%,
+                      rgba(168, 56, 255, 0.03) 100%
+      );
+
+      .reward-block__check-hover {
+        display: block;
+      }
+
+      .reward-block__check {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    @include media(767) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__text {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #a3a3a3;
+    @include media(767) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .vip__container {
+    max-width: 1213px;
+  }
+  .vip-content {
+    margin-bottom: 107px;
+
+    &__title {
+      font-size: 39.5px;
+      margin-bottom: 14px;
+    }
+
+    &__text {
+      font-size: 21px;
+      line-height: 32px;
+    }
+  }
+  .vip-block {
+    &__title {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    &__item {
+      padding: 43px;
+    }
+
+    &__text {
+      font-size: 14.2px;
+      line-height: 21.5px;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+@mixin adaptiveClamp(
+  $property,
+  $startSize,
+  $minSize,
+  $widthFrom: $containerWidth,
+  $widthTo: $minWidth,
+  $keepSize: 0
+) {
+  $addSize: math.div($startSize - $minSize, 16);
+
+  @if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
+    $widthFrom: $maxWidth;
+  }
+  @if ($minSize <= 0) {
+    $minSize: 0.0001;
+  }
+  @if ($startSize <= 0) {
+    $startSize: 0.0001;
+  }
+
+  $widthFromMedia: em($widthFrom);
+  $widthToMedia: em($widthTo);
+  $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+  $yIntersection: -$widthTo * $slope + $minSize;
+  $flyValue: #{rem($yIntersection)}' + ' #{$slope * 100}vw;
+  $propertyValue: #{'clamp(' rem($minSize) ',' $flyValue ',' rem($startSize) ')'};
+  @if ($minSize > $startSize) {
+    $propertyValue: #{'clamp('
+      rem($startSize)
+      ','
+      $flyValue
+      ','
+      rem($minSize)
+      ')'};
+  }
+
+  @if $widthFrom ==
+    $containerWidth or
+    $widthFrom ==
+    $maxWidth or
+    $keepSize ==
+    1 or
+    $keepSize ==
+    2 {
+    @media (min-width: $widthFromMedia) {
+      #{$property}: rem($startSize);
+    }
+  }
+  @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+    @supports (#{$property}: $propertyValue) {
+      #{$property}: $propertyValue;
+    }
+    @supports not (#{$property}: $propertyValue) {
+      #{$property}: calc(
+              #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div(
+            $widthFrom,
+            16
+          ) - math.div($widthTo, 16)}
+      );
+    }
+  }
+  @if $widthTo == $minWidth or $keepSize == 1 or $keepSize == 3 {
+    @media (max-width: $widthToMedia) {
+      #{$property}: rem($minSize);
+    }
+  }
+}
+
+@mixin textGradient($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin media($width) {
+  @media (max-width: #{$width + '.98' + px}) {
+    @content;
+  }
+}
+
+@mixin mediaMx($value) {
+  $width: em($value);
+
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mediaMn($value) {
+  $width: em($value + 0.98);
+
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin anyHover() {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin notLast() {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin notFirst() {
+  &:not(:first-child) {
+    @content;
+  }
+}
+
+@mixin lineClamp($value) {
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin styledPlaceholder($color, $fontSize: inherit, $lineHeight: normal) {
+  &:-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+}
+
+@mixin hidePlaceholder($time: 300, $effect: ease) {
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:-moz-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity #{$time} + ms $effect;
+  }
+}
+
+@mixin pseudocell($type, $pos: absolute) {
+  &::#{$type} {
+    content: '';
+    position: $pos;
+    @content;
+  }
+}
+
+@mixin transition(
+  $property: all,
+  $duration: 0.25s,
+  $timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition: $property $duration $timing-function;
+}
+
+@mixin font($fs: $fs-14, $fw: 400, $lh: normal) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}

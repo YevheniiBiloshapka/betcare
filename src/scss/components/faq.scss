@@ -1,0 +1,141 @@
+
+.faq {
+  position: relative;
+  background-color: #FFF;
+  padding: 48px 0;
+  background-image: url("../../images/faq/faqBgMobile.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-width: 744px) {
+    padding: 64px 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url("../../images/faq/faqBgDesk.webp");
+    padding: 80px 16px;
+  }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+
+    @media screen and (min-width: 744px) {
+      gap: 48px;
+      max-width: 732px;
+    }
+    @media screen and (min-width: 1280px) {
+      display: grid;
+      align-items: start;
+      grid-template-columns: 2fr 3fr;
+      gap: 102px;
+      max-width: 1280px;
+    }
+    @media screen and (min-width: 1768px) {
+      max-width: 1488px;
+    }
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #292929;
+    @include font(44px, 600, 54px);
+    letter-spacing: 0.5px;
+
+    @media screen and (min-width: 1280px) {
+      align-items: start;
+      text-align: start;
+    }
+
+  }
+
+  &__sub-title {
+    background: var(--Main-Gradient, linear-gradient(90deg, #FFBC3B 9.38%, #FF6051 49.67%, #FF4AB0 89.97%, #FF4AAC 89.97%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include font(44px, 600, 54px);
+    letter-spacing: 0.5px;
+  }
+
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: 1280px) {
+      grid-row: 3;
+    }
+    @media screen and (min-width: 744px) {
+      gap: 24px;
+      max-width: 255px;
+    }
+    @media screen and (min-width: 1280px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      align-items: start;
+    }
+    @media screen and (min-width: 1768px) {
+      max-width: fit-content;
+    }
+  }
+
+  &__text {
+    color: #292929;
+    @include font(24px, 600, 36px);
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    @media screen and (min-width: 1280px) {
+      text-align: start;
+    }
+  }
+
+  &__link {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 201px;
+    height: 60px;
+
+    border-radius: 100px;
+    background: #232323;
+    color: #FFF;
+    text-align: center;
+    white-space: nowrap;
+
+    @include font(18px, 600, 28px);
+    letter-spacing: 0.5px;
+    @include transition;
+
+    &:hover {
+      background-color: #474346;
+    }
+  }
+}
+

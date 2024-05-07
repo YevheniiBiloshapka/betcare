@@ -1,0 +1,27 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
+  &__trigger {
+    padding: rem(10);
+    transition: 0.2s ease-in-out;
+
+    &.active {
+      background-color: #ff4040;
+      color: #fff;
+    }
+  }
+  &__panel {
+    animation: fade-up-big 0.4s forwards;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
