@@ -2958,16 +2958,13 @@ sup {
 @media screen and (min-width: 1200px) {
   .cta-links {
     top: 80px;
+    padding: 0 40px;
   }
   .cta-links__container {
-    max-width: 1280px;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 1440px) {
-  .cta-links__container {
-    max-width: 1440px;
-  }
-}
+
 .cta__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -3488,6 +3485,13 @@ sup {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 1px solid #E1126E;
+}
+@media screen and (min-width: 1180px) and (max-width: 1280px) {
+  .cta table tbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .cta table tr.orange {

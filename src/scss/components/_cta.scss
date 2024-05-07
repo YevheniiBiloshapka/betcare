@@ -75,18 +75,13 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
   }
   @media screen and (min-width: 1200px) {
     top: 80px;
+    padding: 0 40px;
     &__container {
-      max-width: 1280px;
+      max-width: 100%;
     }
 
   }
-  @media screen and (min-width: 1440px) {
-    &__container {
-      max-width: 1440px;
-    }
-  }
-  @media screen and (min-width: 1728px) {
-  }
+  
 }
 
 
@@ -663,6 +658,15 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
       border-bottom: 1px solid #E1126E;
     }
   }
+
+  @media screen and (min-width: 1180px) and (max-width: 1280px) {
+    & tbody {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+
 
   @media screen and (min-width: 1280px) {
 
