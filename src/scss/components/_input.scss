@@ -52,7 +52,9 @@
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 0s 600000s, color 0s 600000s !important;
+  -webkit-box-shadow: 0 0 0 1000px #1B1B1B inset;
 }
+
 
 .input-field:focus, input:valid {
   color: #FFF;
