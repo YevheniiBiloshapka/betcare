@@ -30,7 +30,7 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
   overflow: hidden;
   overflow-x: scroll;
   position: sticky;
-  top: 67px;
+  top: 64px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -44,6 +44,7 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
 
 
   &__container {
+
     display: flex;
     gap: 24px;
     align-items: center;
@@ -65,12 +66,15 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
         color: #C01760;
       }
     }
+
+
   }
 
   @media screen and (min-width: 744px) {
-    top: 68px;
+    top: 64px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
+    top: 80px;
     &__container {
       max-width: 1280px;
     }
@@ -82,9 +86,6 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
     }
   }
   @media screen and (min-width: 1728px) {
-    top: 100px;
-
-
   }
 }
 
@@ -92,8 +93,8 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
 .cta__container {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 24px;
-  margin-top: 68px;
+  margin-top: 64px;
+
   position: relative;
 
   &:after {
@@ -105,7 +106,7 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
     width: 100%;
     height: 100%;
     max-height: 600px;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
@@ -114,20 +115,18 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
   @media screen and (min-width: 744px) {
     grid-template-columns: 365px 1fr;
     gap: 24px;
-    margin-bottom: 32px;
+
   }
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
+    margin-top: 80px;
     grid-template-columns: 427px 1fr;
-    margin-top: 68px;
 
   }
   @media screen and (min-width: 1440px) {
     max-width: 1440px;
-    margin-top: 68px;
   }
   @media screen and (min-width: 1728px) {
-    margin-top: 101px;
   }
 }
 
@@ -138,11 +137,9 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
   z-index: 0;
   @media screen and (min-width: 744px) {
     position: sticky;
-    top: 116px;
+    top: 128px;
   }
-  @media screen and (min-width: 1728px) {
-    top: 148px;
-  }
+
 }
 
 // ! header
@@ -360,7 +357,7 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
 
 .cta {
   overflow: hidden;
-
+  padding-bottom: 24px;
 
   &--date {
     color: #A3A3A3;

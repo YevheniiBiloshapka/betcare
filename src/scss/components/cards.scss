@@ -88,25 +88,25 @@
 
   &__button {
     display: flex;
-    width: fit-content;
-    height: 60px;
-    padding: 12px 50px;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    padding: 12px 50px;
+    max-width: 177px;
+    height: 48px;
+
     border-radius: 100px;
     background: #FFF;
-    color: #1B1B1B;
-    text-align: center;
 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
+    color: #1B1B1B;
+    @include font(16px, 600, 28px);
     letter-spacing: 0.5px;
     margin: 0 auto;
-    @include media(1728) {
-      padding: 12px 32px;
-      height: 51px;
+
+    @media screen and (min-width: 744px) {
+      height: 64px;
+      font-size: 20px;
+      max-width: 212px;
     }
   }
 }

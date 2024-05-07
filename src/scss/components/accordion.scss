@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    padding: 20px;
+    padding: 16px;
     gap: 16px;
     transition: background 0.3s ease-in-out;
 
@@ -98,6 +98,9 @@
         height: $size;
         max-height: $size;
       }
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 16px 22px;
     }
   }
 

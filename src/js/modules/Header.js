@@ -15,7 +15,6 @@ export const HeaderInit = () => {
     mobileMenu.classList.toggle('hidden');
     headerLogo.classList.toggle('hidden');
     menuBtns[0].classList.toggle('hidden');
-    menuBtns[1].classList.toggle('hidden');
     burgerButton.classList.toggle('show');
     headerMenu.classList.toggle('marginLeftAuto');
     if (firstOpen) {

@@ -1,8 +1,118 @@
+// 100
 @font-face {
-	font-family: Duplet;
-	font-display: swap;
-	src: url("../../fonts/Duplet-Regular.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Thin.otf") format("otf"), url("./fonts/Duplet-Thin.otf") format("otf");
+  font-weight: 100;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-ThinItalic.otf") format("otf"), url("./fonts/Duplet-ThinItalic.otf") format("otf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+// 200
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Extralight.otf") format("otf"), url("./fonts/Duplet-Extralight.otf") format("otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-ExtralightItalic.otf") format("otf"), url("./fonts/Duplet-ExtralightItalic.otf") format("otf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+// 300
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Light.otf") format("otf"), url("./fonts/Duplet-Light.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-LightItalic.otf") format("otf"), url("./fonts/Duplet-LightItalic.otf") format("otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+// 400
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Regular.otf") format("otf"), url("./fonts/Duplet-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Italic.otf") format("otf"), url("./fonts/Duplet-Italic.otf") format("otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+// 600
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Semibold.otf") format("otf"), url("./fonts/Duplet-Semibold.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-SemiboldItalic.otf") format("otf"), url("./fonts/Duplet-SemiboldItalic.otf") format("otf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+// 700
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Bold.otf") format("otf"), url("./fonts/Duplet-Bold.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-BoldItalic.otf") format("otf"), url("./fonts/Duplet-BoldItalic.otf") format("otf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+// 700
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-Extrabold.otf") format("otf"), url("./fonts/Duplet-Extrabold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("./fonts/Duplet-ExtraboldItalic.otf") format("otf"), url("./fonts/Duplet-ExtraboldItalic.otf") format("otf");
+  font-weight: 700;
+  font-style: italic;
+}

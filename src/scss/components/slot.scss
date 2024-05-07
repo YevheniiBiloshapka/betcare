@@ -12,11 +12,11 @@
       color: #fff;
       text-align: center;
 
-      @include font(24, 600, 133.333%);
+      @include font(24px, 600, 133.333%);
       letter-spacing: 0.5px;
 
       & span {
-        background: var(--Gradient-Txt-5, linear-gradient(90deg, #FFBC3B 0.23%, #FF6051 50.08%, #FF4AB0 99.94%, #FF4AAC 99.94%));
+        background: linear-gradient(90deg, #FFBC3B 0.23%, #FF6051 50.08%, #FF4AB0 99.94%, #FF4AAC 99.94%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
