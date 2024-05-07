@@ -475,20 +475,25 @@
     const logInButton = document.querySelector('.menu__buttons--login');
     const authModalButtonClose = document.querySelector('.login-modal--close-button');
     const loginModal = document.querySelector('.login-modal');
-    const passwordInput = document.getElementById('password');
+    const passwordInputs = document.querySelectorAll('input[type="password"]');
     const togglePasswordIcons = document.querySelectorAll('.password-toggle-icon');
 
 
     // !toggle password
-    togglePasswordIcons.forEach(icon => {
-      icon.addEventListener('click', function() {
-        if (passwordInput.type === 'password') {
-          passwordInput.type = 'text';
-        } else {
-          passwordInput.type = 'password';
-        }
-        togglePasswordIcons.forEach(toggleIcon => {
-          toggleIcon.classList.toggle('active');
+    passwordInputs.forEach(passwordInput => {
+      const togglePasswordIcons = passwordInput.parentNode.querySelectorAll('.password-toggle-icon');
+
+      
+      togglePasswordIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+          } else {
+            passwordInput.type = 'password';
+          }
+          togglePasswordIcons.forEach(toggleIcon => {
+            toggleIcon.classList.toggle('active');
+          });
         });
       });
     });
