@@ -1009,6 +1009,9 @@ sup {
     line-height: 106.667%;
     letter-spacing: 0.5px;
   }
+  .hero__info-box--title-first {
+    display: none;
+  }
   .hero__info-box--button {
     padding: 16px;
     max-width: 228px;
@@ -4296,12 +4299,15 @@ input:-webkit-autofill:focus {
 .accordion__item.open {
   border: 1px solid var(--Main-Gradient, #FFBC3B);
 }
+.accordion__item.open .accordion__header {
+  padding-bottom: 12px;
+}
 .accordion__item.open .accordion__header:after {
   transform: rotate(180deg);
 }
 .accordion__item.open .accordion__content {
   height: max-content;
-  padding: 20px;
+  padding: 0 24px 16px 24px;
 }
 .accordion__header {
   position: relative;
@@ -4315,8 +4321,9 @@ input:-webkit-autofill:focus {
 }
 .accordion__header-text {
   letter-spacing: 0.5px;
+  color: #353535;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
 }
 @media screen and (min-width: 744px) {
@@ -4356,7 +4363,7 @@ input:-webkit-autofill:focus {
 }
 @media screen and (min-width: 1200px) {
   .accordion__header {
-    padding: 16px 22px;
+    padding: 16px 24px;
   }
 }
 .accordion__content {
@@ -4364,12 +4371,16 @@ input:-webkit-autofill:focus {
   overflow: hidden;
   padding: 0 20px;
   transition: all 0.3s ease-in-out;
-  color: var(--Gray-1, #333);
-  font-size: 18px;
-  font-style: normal;
+  color: #353535;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 150%;
   letter-spacing: 0.5px;
+}
+@media screen and (min-width: 1200px) {
+  .accordion__content {
+    font-size: 18px;
+  }
 }
 
 .slotMachine {

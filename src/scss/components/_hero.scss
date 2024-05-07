@@ -124,7 +124,7 @@
   &--title {
     text-align: center;
     padding: 0 16px;
-    
+
     color: #fff;
     @include font(50px, 600, 60px);
     letter-spacing: 0.5px;
@@ -158,6 +158,10 @@
     &--title {
       @include font(90px, 600, 106.667%);
       letter-spacing: 0.5px;
+
+      &-first {
+        display: none;
+      }
     }
     &--button {
       padding: 16px;

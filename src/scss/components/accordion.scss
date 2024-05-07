@@ -36,6 +36,8 @@
       border: 1px solid var(--Main-Gradient, #FFBC3B);
 
       .accordion__header {
+        padding-bottom: 12px;
+
         &:after {
           transform: rotate(180deg);
         }
@@ -43,7 +45,7 @@
 
       .accordion__content {
         height: max-content;
-        padding: 20px;
+        padding: 0 24px 16px 24px;
       }
     }
   }
@@ -61,7 +63,8 @@
 
     &-text {
       letter-spacing: 0.5px;
-      @include font(16px, 400, 24px);
+      color: #353535;
+      @include font(16px, 600, 24px);
 
       @media screen and (min-width: 744px) {
         letter-spacing: 0.5px;
@@ -100,7 +103,7 @@
       }
     }
     @media screen and (min-width: 1200px) {
-      padding: 16px 22px;
+      padding: 16px 24px;
     }
   }
 
@@ -109,12 +112,13 @@
     overflow: hidden;
     padding: 0 20px;
     transition: all 0.3s ease-in-out;
-    color: var(--Gray-1, #333);
+    color: #353535;
+    @include font(16px, 400, 150%);
 
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
     letter-spacing: 0.5px;
+    @media screen and (min-width: 1200px) {
+
+      font-size: 18px;
+    }
   }
 }
