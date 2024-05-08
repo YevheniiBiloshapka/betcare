@@ -547,7 +547,7 @@ sup {
   width: 100vw;
   height: 100vh;
   background: #1b1b1b;
-  z-index: 10;
+  z-index: 9998;
 }
 .desktop-menu.hidden {
   display: none;
@@ -647,11 +647,12 @@ sup {
   width: 100vw;
   height: 100dvh;
   background: #1b1b1b;
-  z-index: 10;
+  z-index: 9998;
 }
 @media (max-width: 1268.98px) {
   .mobile-menu {
     display: flex;
+    z-index: 9998;
   }
 }
 .mobile-menu.hidden {

@@ -294,7 +294,7 @@
   width: 100vw;
   height: 100vh;
   background: #1b1b1b;
-  z-index: 10;
+  z-index: 9998;
   @include media(1268) {
     display: none;
   }
@@ -389,9 +389,11 @@
 }
 
 .mobile-menu {
+
   display: none;
   @include media(1268) {
     display: flex;
+    z-index: 9998;
   }
 
 
@@ -404,7 +406,7 @@
   width: 100vw;
   height: 100dvh;
   background: #1b1b1b;
-  z-index: 10;
+  z-index: 9998;
 
   &__list {
     position: relative;
