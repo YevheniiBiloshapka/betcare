@@ -3919,6 +3919,27 @@ sup {
 .button.green, .green.button-outline {
   background: linear-gradient(90deg, rgba(200, 217, 121, 0.8) 0%, rgba(136, 209, 29, 0.8) 50.44%, rgba(46, 163, 128, 0.8) 100%) padding-box, linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%) border-box;
 }
+.button.white, .white.button-outline {
+  color: #1B1B1B;
+  background: #CCCCCC;
+}
+.button.black, .black.button-outline {
+  color: #fff;
+  background: #1B1B1B;
+}
+.button.secondBlack, .secondBlack.button-outline {
+  color: #fff;
+  background: #2A2A2A;
+}
+.button.large, .large.button-outline {
+  padding: 11px;
+}
+.button.medium, .medium.button-outline {
+  padding: 10px;
+}
+.button.small, .small.button-outline {
+  padding: 10px;
+}
 .button:hover.orange, .button-outline:hover.orange {
   background: linear-gradient(90deg, #FFBC3B 0.04%, #FE5A14 49.63%, #FF1919 99.96%) padding-box, linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%) border-box;
 }
@@ -3931,11 +3952,31 @@ sup {
 .button:hover.green, .button-outline:hover.green {
   background: linear-gradient(90deg, #C8D979 0%, #88D11D 50.44%, #2EA380 100%) padding-box, linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%) border-box;
 }
+.button:hover.white, .button-outline:hover.white {
+  background: #fff;
+}
+.button:hover.black, .button-outline:hover.black {
+  color: #fff;
+  background: #161616;
+}
+.button:hover.secondBlack, .button-outline:hover.secondBlack {
+  background: #353535;
+}
 @media screen and (min-width: 744px) {
   .button, .button-outline {
     padding: 14px;
     font-size: 16px;
     border: 2px solid transparent;
+  }
+  .button.large, .large.button-outline {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .button.medium, .medium.button-outline {
+    padding: 14px;
+  }
+  .button.small, .small.button-outline {
+    padding: 10px;
   }
 }
 

@@ -55,6 +55,34 @@ $blackBg: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%);
     background: $green padding-box, $greenBorder border-box;
   }
 
+  &.white {
+    color: #1B1B1B;
+    background: #CCCCCC;
+  }
+
+  &.black {
+    color: #fff;
+    background: #1B1B1B;
+  }
+
+  &.secondBlack {
+    color: #fff;
+    background: #2A2A2A;
+  }
+
+  //sizes
+  &.large {
+    padding: 11px;
+  }
+
+  &.medium {
+    padding: 10px;
+  }
+
+  &.small {
+    padding: 10px;
+  }
+
   &:hover {
     &.orange {
       background: $orangeHover padding-box, $orangeBorder border-box;
@@ -71,10 +99,32 @@ $blackBg: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%);
     &.green {
       background: $greenHover padding-box, $greenBorder border-box;
     }
+
+    &.white {
+      background: #fff;
+    }
+
+    &.black {
+      color: #fff;
+      background: #161616;
+    }
+
+    &.secondBlack {
+      background: #353535;
+    }
   }
 
   @media screen and (min-width: 744px) {
-
+    &.large {
+      padding: 20px;
+      font-size: 20px;
+    }
+    &.medium {
+      padding: 14px;
+    }
+    &.small {
+      padding: 10px;
+    }
     padding: 14px;
     font-size: 16px;
     border: 2px solid transparent;
