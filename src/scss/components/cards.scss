@@ -89,6 +89,7 @@
   &__button {
     display: flex;
     justify-content: center;
+    white-space: nowrap;
     text-align: center;
     align-items: center;
     padding: 12px 50px;
@@ -115,7 +116,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 44px;
   gap: -109px;
 
   & li {
@@ -132,12 +132,14 @@
   }
 
   @media screen and (min-width: 744px) {
+
     & li:not(:first-child) {
       margin-top: -130px;
     }
   }
   @media screen and (min-width: 1280px) {
     flex-direction: row;
+    margin-bottom: 44px;
     & li {
       transform: rotate(-15.011deg);
 

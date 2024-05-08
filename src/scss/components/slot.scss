@@ -468,6 +468,7 @@
   border: 2px solid transparent;
   background: linear-gradient(#1B1B1B, #1B1B1B) padding-box,
   linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
+  @include transition;
 
   &:before, &:after {
     content: " ";
@@ -493,7 +494,8 @@
   }
 
   &:hover {
-    transform: scale(1.01);
+    background: linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) padding-box,
+    linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
   }
 
   & span {

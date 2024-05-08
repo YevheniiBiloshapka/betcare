@@ -1,100 +1,51 @@
 @font-face {
   font-family: Duplet;
   font-display: swap;
-  src: url("../fonts/Duplet-Thin.woff2") format("woff2"), url("../fonts/Duplet-Thin.otf") format("otf");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-ThinItalic.woff2") format("woff2"), url("../fonts/Duplet-ThinItalic.otf") format("otf");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Extralight.woff2") format("woff2"), url("../fonts/Duplet-Extralight.otf") format("otf");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-ExtralightItalic.woff2") format("woff2"), url("../fonts/Duplet-ExtralightItalic.otf") format("otf");
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Light.woff2") format("woff2"), url("../fonts/Duplet-Light.otf") format("otf");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-LightItalic.woff2") format("woff2"), url("../fonts/Duplet-LightItalic.otf") format("otf");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Regular.woff2") format("woff2"), url("../fonts/Duplet-Regular.otf") format("otf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Italic.woff2") format("woff2"), url("../fonts/Duplet-Italic.otf") format("otf");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Semibold.woff2") format("woff2"), url("../fonts/Duplet-Semibold.otf") format("otf");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-SemiboldItalic.woff2") format("woff2"), url("../fonts/Duplet-SemiboldItalic.otf") format("otf");
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Bold.woff2") format("woff2"), url("../fonts/Duplet-Bold.otf") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-BoldItalic.woff2") format("woff2"), url("../fonts/Duplet-BoldItalic.otf") format("otf");
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: Duplet;
-  font-display: swap;
-  src: url("../fonts/Duplet-Extrabold.woff2") format("woff2"), url("../fonts/Duplet-Extrabold.otf") format("otf");
+  src: url("../fonts/Duplet-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: Duplet;
   font-display: swap;
-  src: url("../fonts/Duplet-ExtraboldItalic.woff2") format("woff2"), url("../fonts/Duplet-ExtraboldItalic.otf") format("otf");
-  font-weight: 700;
-  font-style: italic;
+  src: url("../fonts/Duplet-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("../fonts/Duplet-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("../fonts/Duplet-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("../fonts/Duplet-Extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("../fonts/Duplet-Extralight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Duplet;
+  font-display: swap;
+  src: url("../fonts/Duplet-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 * {
   padding: 0;
@@ -136,9 +87,10 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  font-family: Duplet, sans-serif;
+  font-family: "Duplet", sans-serif, sans-serif;
   font-weight: 400;
   line-height: 1;
+  font-style: normal;
 }
 
 input,
@@ -921,9 +873,6 @@ sup {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero__slide.red .hero__info-box--button {
-  background: linear-gradient(90deg, rgba(255, 155, 60, 0.8) 0.1%, rgba(255, 79, 64, 0.8) 50%, rgba(219, 50, 120, 0.8) 99.9%) padding-box, linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
-}
 .hero__slide.red .hero__scroll-button-link:after {
   background: linear-gradient(to bottom right, #e1126e, #ff996e 52%, #ff4a4a);
 }
@@ -932,9 +881,6 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.hero__slide.purple .hero__info-box--button {
-  background: linear-gradient(90deg, rgba(162, 161, 236, 0.8) 0.04%, rgba(75, 111, 237, 0.8) 47.81%, rgba(150, 46, 232, 0.8) 99.96%) padding-box, linear-gradient(90deg, #B9B8F6 0.04%, #3D5DD2 50.5%, #5D1695 99.96%) border-box;
 }
 .hero__slide.purple .hero__scroll-button-link:after {
   background: linear-gradient(140deg, #3B5EFF 16.92%, #A09EFF 52.46%, #A838FF 87.99%);
@@ -945,9 +891,6 @@ sup {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero__slide.orange .hero__info-box--button {
-  background: linear-gradient(90deg, rgba(255, 188, 59, 0.8) 0.04%, rgba(254, 90, 20, 0.8) 49.63%, rgba(255, 25, 25, 0.8) 99.96%) padding-box, linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%) border-box;
-}
 .hero__slide.orange .hero__scroll-button-link:after {
   background: linear-gradient(133deg, #FE5A14 12.34%, #FFBC3B 50.76%, #FF1919 86.85%);
 }
@@ -956,9 +899,6 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.hero__slide.green .hero__info-box--button {
-  background: linear-gradient(90deg, rgba(200, 217, 121, 0.8) 0%, rgba(136, 209, 29, 0.8) 50.44%, rgba(46, 163, 128, 0.8) 100%) padding-box, linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%) border-box;
 }
 .hero__slide.green .hero__scroll-button-link:after {
   background: linear-gradient(138deg, #237427 8.16%, #E5F1AF 43.64%, #A4D35F 94.7%);
@@ -984,21 +924,7 @@ sup {
   letter-spacing: 0.5px;
 }
 .hero__info-box--button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   max-width: 165px;
-  padding: 12px;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: 0.5px;
-  border-radius: 100px;
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, rgba(255, 155, 60, 0.8) 0.1%, rgba(255, 79, 64, 0.8) 50%, rgba(219, 50, 120, 0.8) 99.9%) padding-box, linear-gradient(90deg, rgba(255, 155, 60, 0.8) 0.1%, rgba(255, 79, 64, 0.8) 50%, rgba(219, 50, 120, 0.8) 99.9%) border-box;
 }
 @media screen and (min-width: 744px) {
   .hero__info-box {
@@ -1014,9 +940,7 @@ sup {
     display: none;
   }
   .hero__info-box--button {
-    padding: 16px;
     max-width: 228px;
-    font-size: 16px;
   }
 }
 
@@ -2050,6 +1974,7 @@ sup {
   border-radius: 100px;
   border: 2px solid transparent;
   background: linear-gradient(#1B1B1B, #1B1B1B) padding-box, linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 20px;
   font-weight: 600;
   line-height: 100%;
@@ -2073,7 +1998,7 @@ sup {
   animation: pulseAfter 2s 1s ease-out infinite;
 }
 .slot__container--button:hover {
-  transform: scale(1.01);
+  background: linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) padding-box, linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
 }
 .slot__container--button span {
   color: #fff;
@@ -2487,6 +2412,7 @@ sup {
 .cards__button {
   display: flex;
   justify-content: center;
+  white-space: nowrap;
   text-align: center;
   align-items: center;
   padding: 12px 50px;
@@ -2513,7 +2439,6 @@ sup {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 44px;
   gap: -109px;
 }
 .cards__block li {
@@ -2534,6 +2459,7 @@ sup {
 @media screen and (min-width: 1280px) {
   .cards__block {
     flex-direction: row;
+    margin-bottom: 44px;
   }
   .cards__block li {
     transform: rotate(-15.011deg);
@@ -2819,15 +2745,17 @@ sup {
   align-items: center;
   text-align: center;
   color: #292929;
-  font-size: 44px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 54px;
+  line-height: 133.333%;
   letter-spacing: 0.5px;
 }
 @media screen and (min-width: 1280px) {
   .faq__title {
     align-items: start;
     text-align: start;
+    font-size: 44px;
+    line-height: 122.727%;
   }
 }
 .faq__sub-title {
@@ -2835,10 +2763,16 @@ sup {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 44px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 54px;
+  line-height: 133.333%;
   letter-spacing: 0.5px;
+}
+@media screen and (min-width: 1280px) {
+  .faq__sub-title {
+    font-size: 44px;
+    line-height: 122.727%;
+  }
 }
 .faq__links {
   display: flex;
@@ -2874,15 +2808,20 @@ sup {
 }
 .faq__text {
   color: #292929;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 133.333%;
   letter-spacing: 0.5px;
-  text-align: center;
+  text-align: start;
+  max-width: 182px;
 }
 @media screen and (min-width: 1280px) {
   .faq__text {
     text-align: start;
+    max-width: 250px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
   }
 }
 .faq__link {
@@ -2906,7 +2845,6 @@ sup {
 .faq__link:hover {
   background-color: #474346;
 }
-
 .cta__header-styles .header {
   background-color: #1b1b1b;
 }
@@ -3952,6 +3890,68 @@ sup {
   border-radius: 0.5rem;
 }
 
+.button, .button-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 11px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background: linear-gradient(90deg, rgba(255, 188, 59, 0.8) 0.04%, rgba(254, 90, 20, 0.8) 49.63%, rgba(255, 25, 25, 0.8) 99.96%) padding-box, linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%) border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button.orange, .orange.button-outline {
+  background: linear-gradient(90deg, rgba(255, 188, 59, 0.8) 0.04%, rgba(254, 90, 20, 0.8) 49.63%, rgba(255, 25, 25, 0.8) 99.96%) padding-box, linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%) border-box;
+}
+.button.red, .red.button-outline {
+  background: linear-gradient(90deg, rgba(255, 155, 60, 0.8) 0.1%, rgba(255, 79, 64, 0.8) 50%, rgba(219, 50, 120, 0.8) 99.9%) padding-box, linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
+}
+.button.purple, .purple.button-outline {
+  background: linear-gradient(90deg, rgba(162, 161, 236, 0.8) 0.04%, rgba(75, 111, 237, 0.8) 47.81%, rgba(150, 46, 232, 0.8) 99.96%) padding-box, linear-gradient(90deg, #B9B8F6 0.04%, #3D5DD2 50.5%, #5D1695 99.96%) border-box;
+}
+.button.green, .green.button-outline {
+  background: linear-gradient(90deg, rgba(200, 217, 121, 0.8) 0%, rgba(136, 209, 29, 0.8) 50.44%, rgba(46, 163, 128, 0.8) 100%) padding-box, linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%) border-box;
+}
+.button:hover.orange, .button-outline:hover.orange {
+  background: linear-gradient(90deg, #FFBC3B 0.04%, #FE5A14 49.63%, #FF1919 99.96%) padding-box, linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%) border-box;
+}
+.button:hover.red, .button-outline:hover.red {
+  background: linear-gradient(90deg, #FF9B3C 0.1%, #FF4F40 50%, #DB3278 99.9%) padding-box, linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
+}
+.button:hover.purple, .button-outline:hover.purple {
+  background: linear-gradient(90deg, #A2A1EC 0.04%, #4B6FED 47.81%, #962EE8 99.96%) padding-box, linear-gradient(90deg, #B9B8F6 0.04%, #3D5DD2 50.5%, #5D1695 99.96%) border-box;
+}
+.button:hover.green, .button-outline:hover.green {
+  background: linear-gradient(90deg, #C8D979 0%, #88D11D 50.44%, #2EA380 100%) padding-box, linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%) border-box;
+}
+@media screen and (min-width: 744px) {
+  .button, .button-outline {
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid transparent;
+  }
+}
+
+.button-outline.orange {
+  background: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%) padding-box, linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%) border-box;
+}
+.button-outline.red {
+  background: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%) padding-box, linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
+}
+.button-outline.purple {
+  background: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%) padding-box, linear-gradient(90deg, #B9B8F6 0.04%, #3D5DD2 50.5%, #5D1695 99.96%) border-box;
+}
+.button-outline.green {
+  background: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%) padding-box, linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%) border-box;
+}
+
 .input {
   position: relative;
   width: 100%;
@@ -4302,7 +4302,8 @@ input:-webkit-autofill:focus {
   margin-bottom: 0;
 }
 .accordion__item.open {
-  border: 1px solid var(--Main-Gradient, #FFBC3B);
+  border: 2px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #FFBC3B 0.23%, #FF6051 50.08%, #FF4AB0 99.94%, #FF4AAC 99.94%) border-box;
 }
 .accordion__item.open .accordion__header {
   padding-bottom: 12px;
@@ -4312,7 +4313,12 @@ input:-webkit-autofill:focus {
 }
 .accordion__item.open .accordion__content {
   height: max-content;
-  padding: 0 24px 16px 24px;
+  padding: 0 16px 16px 16px;
+}
+@media screen and (min-width: 744px) {
+  .accordion__item.open .accordion__content {
+    padding: 0 24px 16px 24px;
+  }
 }
 .accordion__header {
   position: relative;

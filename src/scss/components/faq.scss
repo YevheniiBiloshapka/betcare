@@ -56,12 +56,14 @@
     align-items: center;
     text-align: center;
     color: #292929;
-    @include font(44px, 600, 54px);
+    @include font(24px, 600, 133.333%);
     letter-spacing: 0.5px;
 
     @media screen and (min-width: 1280px) {
       align-items: start;
       text-align: start;
+      font-size: 44px;
+      line-height: 122.727%;
     }
 
   }
@@ -72,8 +74,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @include font(44px, 600, 54px);
+    @include font(24px, 600, 133.333%);
     letter-spacing: 0.5px;
+    @media screen and (min-width: 1280px) {
+      font-size: 44px;
+      line-height: 122.727%;
+    }
   }
 
 
@@ -106,12 +112,14 @@
 
   &__text {
     color: #292929;
-    @include font(24px, 600, 36px);
+    @include font(18px, 600, 133.333%);
     letter-spacing: 0.5px;
-    text-align: center;
-
+    text-align: start;
+    max-width: 182px;
     @media screen and (min-width: 1280px) {
       text-align: start;
+      max-width: 250px;
+      @include font(24px, 600, 150%);
     }
   }
 
@@ -121,6 +129,7 @@
     justify-content: center;
     align-items: center;
     width: 201px;
+
     height: 60px;
 
     border-radius: 100px;
@@ -135,6 +144,10 @@
 
     &:hover {
       background-color: #474346;
+    }
+
+    @media screen and (min-width: 1768px) {
+      
     }
   }
 }

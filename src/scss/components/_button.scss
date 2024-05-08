@@ -1,0 +1,103 @@
+//orange
+$orange: linear-gradient(90deg, rgba(255, 188, 59, 0.80) 0.04%, rgba(254, 90, 20, 0.80) 49.63%, rgba(255, 25, 25, 0.80) 99.96%);
+$orangeBorder: linear-gradient(90deg, #FFC047 0.04%, #DF5012 48.5%, #C40C0C 99.96%);
+$orangeHover: linear-gradient(90deg, #FFBC3B 0.04%, #FE5A14 49.63%, #FF1919 99.96%);
+//red
+$red: linear-gradient(90deg, rgba(255, 155, 60, 0.80) 0.1%, rgba(255, 79, 64, 0.80) 50%, rgba(219, 50, 120, 0.80) 99.9%);
+$redBorder: linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%);
+$redHover: linear-gradient(90deg, #FF9B3C 0.1%, #FF4F40 50%, #DB3278 99.9%);
+//purple
+$purple: linear-gradient(90deg, rgba(162, 161, 236, 0.80) 0.04%, rgba(75, 111, 237, 0.80) 47.81%, rgba(150, 46, 232, 0.80) 99.96%);
+$purpleBorder: linear-gradient(90deg, #B9B8F6 0.04%, #3D5DD2 50.5%, #5D1695 99.96%);
+$purpleHover: linear-gradient(90deg, #A2A1EC 0.04%, #4B6FED 47.81%, #962EE8 99.96%);
+
+//green
+$green: linear-gradient(90deg, rgba(200, 217, 121, 0.80) 0%, rgba(136, 209, 29, 0.80) 50.44%, rgba(46, 163, 128, 0.80) 100%);
+$greenBorder: linear-gradient(90deg, #E7F899 0%, #E4F0AF 0.01%, #97DD31 48.21%, #176850 100%);
+$greenHover: linear-gradient(90deg, #C8D979 0%, #88D11D 50.44%, #2EA380 100%);
+
+//black bg
+$blackBg: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%);
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  padding: 11px;
+
+  color: #fff;
+  text-align: center;
+
+  @include font(14px, 600, 100%);
+  letter-spacing: 0.5px;
+
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background: $orange padding-box, $orangeBorder border-box;
+
+  @include transition;
+
+  &.orange {
+    background: $orange padding-box, $orangeBorder border-box;
+  }
+
+  &.red {
+    background: $red padding-box, $redBorder border-box;
+  }
+
+  &.purple {
+    background: $purple padding-box, $purpleBorder border-box;
+  }
+
+  &.green {
+    background: $green padding-box, $greenBorder border-box;
+  }
+
+  &:hover {
+    &.orange {
+      background: $orangeHover padding-box, $orangeBorder border-box;
+    }
+
+    &.red {
+      background: $redHover padding-box, $redBorder border-box;
+    }
+
+    &.purple {
+      background: $purpleHover padding-box, $purpleBorder border-box;
+    }
+
+    &.green {
+      background: $greenHover padding-box, $greenBorder border-box;
+    }
+  }
+
+  @media screen and (min-width: 744px) {
+
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid transparent;
+
+  }
+}
+
+.button-outline {
+  @extend .button;
+
+  &.orange {
+    background: $blackBg padding-box, $orangeBorder border-box;
+  }
+
+  &.red {
+    background: $blackBg padding-box, $redBorder border-box;
+  }
+
+  &.purple {
+    background: $blackBg padding-box, $purpleBorder border-box;
+  }
+
+  &.green {
+    background: $blackBg padding-box, $greenBorder border-box;
+  }
+}

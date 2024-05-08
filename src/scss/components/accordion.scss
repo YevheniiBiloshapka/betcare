@@ -33,9 +33,11 @@
     }
 
     &.open {
-      border: 1px solid var(--Main-Gradient, #FFBC3B);
+      border: 2px solid transparent;
+      background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(90deg, #FFBC3B 0.23%, #FF6051 50.08%, #FF4AB0 99.94%, #FF4AAC 99.94%) border-box;
 
-      .accordion__header {
+      & .accordion__header {
         padding-bottom: 12px;
 
         &:after {
@@ -43,11 +45,19 @@
         }
       }
 
-      .accordion__content {
+      & .accordion__content {
         height: max-content;
-        padding: 0 24px 16px 24px;
+        padding: 0 16px 16px 16px;
+      }
+
+      @media screen and (min-width: 744px) {
+        & .accordion__content {
+          padding: 0 24px 16px 24px;
+        }
       }
     }
+
+
   }
 
   &__header {
