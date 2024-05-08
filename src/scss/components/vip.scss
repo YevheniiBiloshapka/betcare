@@ -1,4 +1,5 @@
 .vip {
+  overflow: hidden;
   position: relative;
   background: #1b1b1b;
   width: 100vw;
@@ -13,19 +14,19 @@
 
   &:after {
     content: " ";
-    background-image: url("../images/vip/bgVip.webp");
-    background-size: contain;
+    background-image: url("../images/vip/vipMobileBg.webp");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: center;
 
     position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 1335px;
-    max-height: 650px;
+    top: -15%;
+    right: -10%;
+
+
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: -2;
 
   }
 
@@ -43,6 +44,26 @@
     }
     @media screen and (min-width: 1440px) {
       max-width: 1326px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:after {
+      content: " ";
+      background-image: url("../images/vip/vipDeskGradBg.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top right;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 1335px;
+      max-height: 600px;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
     }
   }
 }
@@ -122,11 +143,14 @@
 
     border-radius: 16px;
     cursor: pointer;
-    border: 1px solid #353535;
-    background: linear-gradient(93.17deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
+
+    border: 2px solid transparent;
+    background: linear-gradient(105deg, #242A32 0.2%, #292732 50.49%, #21222B 100%) padding-box, linear-gradient(90deg, rgba(59, 94, 255, 0.50) 25.36%, rgba(160, 158, 255, 0.50) 49.29%, rgba(168, 56, 255, 0.50) 73.22%) border-box;
+
     transition: box-shadow 0.3s ease,
     transform 0.3s ease,
     border 0.3s ease;
+
 
     &::before {
       content: "";
@@ -136,28 +160,20 @@
       bottom: -1px;
       left: -1px;
       background: radial-gradient(
-                      circle at var(--x) var(--y),
+                      circle at 10px 10px,
                       #172b88 0%,
                       #172b88 25%,
                       hsla(0, 0%, 100%, 0) 50%,
                       transparent 80%
       );
       z-index: 1;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    &:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    &:hover::before {
       opacity: 0.3;
+      transition: opacity 0.3s ease;
     }
 
     &:nth-of-type(2)::before {
       background: radial-gradient(
-                      circle at var(--x) var(--y),
+                      circle at 10px 10px,
                       #364f6e 0%,
                       #364f6e 25%,
                       hsla(0, 0%, 100%, 0) 50%,
@@ -167,12 +183,20 @@
 
     &:nth-of-type(3)::before {
       background: radial-gradient(
-                      circle at var(--x) var(--y),
+                      circle at 10px 10px,
                       #4a0c7a 0%,
                       #4a0c7a 25%,
                       hsla(0, 0%, 100%, 0) 50%,
                       transparent 80%
       );
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover::before {
+      opacity: 0.3;
     }
 
     .light {
@@ -212,6 +236,46 @@
     @media screen and (min-width: 1200px) {
       padding: 32px 48px;
       max-width: fit-content;
+      border: 1px solid #353535;
+      background: linear-gradient(93.17deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
+      &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        background: radial-gradient(
+                        circle at var(--x) var(--y),
+                        #172b88 0%,
+                        #172b88 25%,
+                        hsla(0, 0%, 100%, 0) 50%,
+                        transparent 80%
+        );
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:nth-of-type(2)::before {
+        background: radial-gradient(
+                        circle at var(--x) var(--y),
+                        #364f6e 0%,
+                        #364f6e 25%,
+                        hsla(0, 0%, 100%, 0) 50%,
+                        transparent 80%
+        );
+      }
+
+      &:nth-of-type(3)::before {
+        background: radial-gradient(
+                        circle at var(--x) var(--y),
+                        #4a0c7a 0%,
+                        #4a0c7a 25%,
+                        hsla(0, 0%, 100%, 0) 50%,
+                        transparent 80%
+        );
+      }
     }
   }
 
@@ -256,7 +320,7 @@
 
   color: #F5F5F5;
 
-  @include font(16px, 600, 100%);
+  @include font(16px, 400, 100%);
   letter-spacing: 0.5px;
 
   border: 2px solid transparent;
@@ -273,7 +337,7 @@
     max-width: 309px;
     height: 64px;
     font-size: 20px;
-    background: linear-gradient(89.95deg, #1f4354 0.04%, #1f4354 50.5%) padding-box,
+    background: linear-gradient(89.95deg, #1f455b 0.04%, #18333d 50.5%) padding-box,
     linear-gradient(90deg, #B9B8F6 0.04%, #3D5DD2 50.5%, #5D1695 99.96%) border-box;
   }
 }
