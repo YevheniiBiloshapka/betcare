@@ -28,15 +28,9 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
 .cta-links {
   z-index: 2;
   overflow: hidden;
-  overflow-x: scroll;
+
   position: sticky;
   top: 64px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  & ::-webkit-scrollbar {
-    display: none;
-  }
 
   background: #F5F5F5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
@@ -44,6 +38,13 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
 
 
   &__container {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    & ::-webkit-scrollbar {
+      display: none;
+    }
 
     display: flex;
     gap: 24px;
@@ -70,6 +71,18 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
 
   }
 
+  @media screen and (max-width: 1280px) {
+    &:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+      width: 40px;
+      background: linear-gradient(270deg, #F5F5F5 0%, rgba(245, 245, 245, 0.00) 100%);
+    }
+  }
   @media screen and (min-width: 744px) {
     top: 64px;
   }
@@ -81,7 +94,7 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
     }
 
   }
-  
+
 }
 
 
@@ -1152,5 +1165,43 @@ $orange: linear-gradient(90deg, #E1126E 2.22%, #FF996E 52.07%, #FF4A4A 80.55%);
     &--img-box {
       max-height: 536px;
     }
+  }
+}
+
+.cta-any-questions {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 12px 24px;
+  gap: 8px;
+  width: 100%;
+  max-width: 170px;
+
+  color: #FFF;
+  text-align: center;
+  white-space: nowrap;
+
+  @include font(14px, 600, 100%);
+  letter-spacing: 0.5px;
+
+
+  cursor: pointer;
+  border-radius: 100px;
+  background: #1B1B1B;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.40);
+
+  &:hover {
+    background: #494949;
+  }
+
+  @media screen and (min-width: 744px) {
+    bottom: 32px;
+    right: 32px;
   }
 }

@@ -158,6 +158,9 @@
 
   &__buttons {
     display: flex;
+    justify-content: end;
+    max-width: 320px;
+    width: 100%;
     gap: 9px;
     margin-left: auto;
 
@@ -173,6 +176,7 @@
       text-align: center;
       padding: 12px 24px;
       width: fit-content;
+      white-space: nowrap;
 
       color: #1b1b1b;
       opacity: 0.8;
@@ -243,6 +247,7 @@
     position: relative;
     cursor: pointer;
     display: flex;
+    min-width: 40px;
     width: 40px;
     height: 40px;
     justify-content: center;
@@ -279,6 +284,18 @@
   }
 
   @media screen and (min-width: 1200px) {
+    &__buttons {
+      &--talk {
+
+        width: 100%;
+        max-width: 151px;
+      }
+
+      &--login {
+        width: 100%;
+        max-width: 88px;
+      }
+    }
   }
 
 }

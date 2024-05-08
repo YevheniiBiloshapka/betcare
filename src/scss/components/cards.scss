@@ -93,6 +93,7 @@
     text-align: center;
     align-items: center;
     padding: 12px 50px;
+    width: 100%;
     max-width: 177px;
     height: 48px;
 
@@ -152,7 +153,7 @@
     }
     & li:not(:first-child) {
       margin-top: 0;
-      margin-left: -115px;
+      margin-left: -160px;
     }
   }
 }
@@ -208,6 +209,6 @@
     border-radius: 24px;
     height: auto;
     width: 100%;
-    max-width: 414px;
+    max-width: 367px;
   }
 }

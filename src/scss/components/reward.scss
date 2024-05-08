@@ -52,6 +52,10 @@
       grid-template-columns: 1fr 1fr;
       align-items: start;
       gap: 144px;
+
+    }
+    @media screen and (min-width: 1440px) {
+      max-width: 1356px;
     }
   }
 
@@ -220,12 +224,11 @@
       @include font(20px, 600, 20px);
     }
     @media screen and (min-width: 1200px) {
-      max-width: 290px;
+      max-width: 288px;
       background: linear-gradient(90deg, #502D21 0.1%, #1B1B1B 50%) padding-box,
       linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
     }
     @media screen and (min-width: 1440px) {
-      max-width: 290px;
       background: linear-gradient(90deg, #231D1C 0.1%, #1C1C1C 50%) padding-box,
       linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
     }
