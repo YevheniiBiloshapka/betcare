@@ -124,30 +124,16 @@
   }
 
   &__link {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 201px;
-
-    height: 60px;
-
-    border-radius: 100px;
-    background: #232323;
-    color: #FFF;
-    text-align: center;
-    white-space: nowrap;
-
-    @include font(18px, 600, 28px);
-    letter-spacing: 0.5px;
     @include transition;
+    height: 48px;
 
     &:hover {
       background-color: #474346;
     }
 
-    @media screen and (min-width: 1768px) {
-      
+    @media screen and (min-width: 1200px) {
+      height: 64px;
     }
   }
 }

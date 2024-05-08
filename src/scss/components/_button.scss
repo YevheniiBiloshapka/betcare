@@ -24,7 +24,7 @@ $blackBg: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%);
   align-items: center;
   justify-content: center;
   width: 100%;
-
+  white-space: nowrap;
   padding: 11px;
 
   color: #fff;
@@ -106,7 +106,7 @@ $blackBg: linear-gradient(89.95deg, #1b1b1b 0.04%, #1b1b1b 50.5%);
 
     &.black {
       color: #fff;
-      background: #161616;
+      background: #464347;
     }
 
     &.secondBlack {

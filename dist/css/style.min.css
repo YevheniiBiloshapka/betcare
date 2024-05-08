@@ -2861,26 +2861,19 @@ sup {
   }
 }
 .faq__link {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 201px;
-  height: 60px;
-  border-radius: 100px;
-  background: #232323;
-  color: #FFF;
-  text-align: center;
-  white-space: nowrap;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: 0.5px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 48px;
 }
 .faq__link:hover {
   background-color: #474346;
 }
+@media screen and (min-width: 1200px) {
+  .faq__link {
+    height: 64px;
+  }
+}
+
 .cta__header-styles .header {
   background-color: #1b1b1b;
 }
@@ -3931,6 +3924,7 @@ sup {
   align-items: center;
   justify-content: center;
   width: 100%;
+  white-space: nowrap;
   padding: 11px;
   color: #fff;
   text-align: center;
@@ -3993,7 +3987,7 @@ sup {
 }
 .button:hover.black, .button-outline:hover.black {
   color: #fff;
-  background: #161616;
+  background: #464347;
 }
 .button:hover.secondBlack, .button-outline:hover.secondBlack {
   background: #353535;
