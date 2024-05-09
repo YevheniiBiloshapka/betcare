@@ -4,6 +4,7 @@
   width: 100vw;
   padding: 86px 0;
   z-index: 1;
+  margin-top: -1px;
 
   &:after {
     position: absolute;
@@ -51,11 +52,18 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: start;
-      gap: 144px;
+
 
     }
     @media screen and (min-width: 1440px) {
-      max-width: 1356px;
+      grid-template-columns: 520px 590px;
+      max-width: 1230px;
+      gap: 90px;
+    }
+    @media screen and (min-width: 1728px) {
+      grid-template-columns: 658px 590px;
+      max-width: 1392px;
+      gap: 144px;
     }
   }
 
@@ -75,9 +83,9 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 24px;
   height: fit-content;
-
+  margin: 0;
   border: 1px solid #353535;
   border-radius: 24px;
   padding: 40px;
@@ -86,6 +94,9 @@
   @include media(767) {
     padding: 16px;
     gap: 24px;
+  }
+  @media screen and (min-width: 1728px) {
+    margin-left: 136px;
   }
 
   &:hover {
@@ -143,6 +154,8 @@
     @include font(24px, 400, 36px);
     letter-spacing: 0.5px;
     color: #FFFFFF;
+    margin-bottom: 7px;
+
     @include media(767) {
       font-size: 18px;
       line-height: 24px;
@@ -215,7 +228,7 @@
     linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
 
     &:hover {
-      background: linear-gradient(90.12deg, #FF9B3C 0.1%, #FF4F40 50%, #DB3278 99.9%);
+      background: linear-gradient(90.12deg, #FF9B3C 0.1%, #FF4F40 50%, #DB3278 99.9%) padding-box, linear-gradient(90.12deg, #FF9B3C 0.1%, #FF4F40 50%, #DB3278 99.9%) border-box;;
     }
 
     @media screen and (min-width: 744px) {
@@ -229,6 +242,10 @@
       linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
     }
     @media screen and (min-width: 1440px) {
+      background: linear-gradient(90deg, #502a1c 0.1%, #1C1C1C 50%) padding-box,
+      linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
+    }
+    @media screen and (min-width: 1728px) {
       background: linear-gradient(90deg, #231D1C 0.1%, #1C1C1C 50%) padding-box,
       linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%) border-box;
     }
@@ -248,10 +265,14 @@
     &__title {
       text-align: start;
       width: fit-content;
+      margin-bottom: 32px;
     }
     &__text {
       text-align: left;
     }
+  }
+  @media screen and (min-width: 1728px) {
+    margin-top: -3px;
   }
 }
 

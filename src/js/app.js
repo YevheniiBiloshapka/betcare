@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.services-slider-nav-prev',
     },
     effect: 'fade',
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   var heroSwiper = new Swiper('.heroPageSwiper', {
     effect: 'fade',
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    allowTouchMove: false,
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
+    // allowTouchMove: false,
     loop: true,
   });
 

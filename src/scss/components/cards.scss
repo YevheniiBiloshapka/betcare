@@ -1,18 +1,37 @@
 .cards {
   position: relative;
+  overflow: hidden;
   background-color: #1B1B1B;
   padding: 80px 0 60px;
   width: 100vw;
-  background-image: url("../images/cards/gradienCarsdBg.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+  margin-top: -2px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+
+    width: 1728px;
+    height: 914.9px;
+    background-image: url("../images/cards/gradienCarsdBg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   @include media(1728) {
     padding: 63px 0 60px;
   }
   @include media(767) {
     padding: 48px 16px;
+  }
+  @media screen and (min-width: 1728px) {
+    &:after {
+      transform: translate(-50%, -43%);
+    }
   }
 
   &__container {
@@ -29,6 +48,9 @@
     }
     @media screen and (min-width: 1280px) {
       gap: 64px;
+    }
+    @media screen and (min-width: 1440px) {
+      gap: 43px;
     }
   }
 
@@ -104,6 +126,11 @@
     @include font(16px, 600, 28px);
     letter-spacing: 0.5px;
     margin: 0 auto;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
 
     @media screen and (min-width: 744px) {
       height: 64px;
@@ -124,7 +151,7 @@
   }
 
   & li:hover {
-    z-index: 40;
+    //z-index: 40;
     transform: translateX(-20px);
   }
 
@@ -144,9 +171,7 @@
     & li {
       transform: rotate(-15.011deg);
 
-
       &:hover {
-        z-index: 40;
         transform: rotate(-15.011deg) scale(1.02);
         box-shadow: 3px 5px 46.3px 0px rgba(91, 7, 48, 0.72);
       }
@@ -156,6 +181,14 @@
       margin-left: -160px;
     }
   }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 71px;
+    & li:not(:first-child) {
+      margin-top: 0;
+      margin-left: -164px;
+    }
+  }
+
 }
 
 .cards__card {
@@ -210,5 +243,8 @@
     height: auto;
     width: 100%;
     max-width: 367px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 414.06px;
   }
 }

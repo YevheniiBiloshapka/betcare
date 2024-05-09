@@ -21,10 +21,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 200px;
-    gap: 100px;
+    padding-top: 80px;
+    gap: 126px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1728px) {
+    padding-top: 200px;
     gap: 200px;
   }
 }
@@ -57,26 +58,38 @@
     max-width: 420px;
     min-height: 700px;
 
-    & .gallery-top {
+    & .gallery-top, & .swiper-slide {
       max-width: 420px;
       height: 700px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+
+    min-width: 391px;
+    max-width: 391px;
+    min-height: 620px;
+
+    & .gallery-top, & .swiper-slide {
+      min-height: 620px;
+      height: 620px;
+      max-width: 390px;
+    }
+  }
+  @media screen and (min-width: 1728px) {
+    min-width: 420px;
+    max-width: 420px;
+    min-height: 700px;
+    margin-left: 50px;
+
+    & .gallery-top, & .swiper-slide {
+      min-height: 700px;
+      height: 700px;
+      max-width: 420px;
     }
 
-    & .swiper-slide {
-      max-width: 420px;
-      height: 700px;
-    }
   }
-  @media screen and (min-width: 1440px) {
-    & .gallery-top {
-      height: 700px;
-      max-width: 420px;
-    }
-    & .swiper-slide {
-      height: 700px;
-      max-width: 420px;
-    }
-  }
+
 
 }
 
@@ -128,6 +141,16 @@
 // TODO: THUMBS
 .styled-gallery-thumbs {
   max-width: 610px;
+  @media screen and (min-width: 1280px) {
+    max-width: 561px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 561px;
+    margin-top: -20px;
+  }
+  @media screen and (min-width: 1720px) {
+    margin-top: 57px;
+  }
 }
 
 .gallery-thumbs {
@@ -197,6 +220,8 @@
     line-height: 54px;
     margin-bottom: 24px;
   }
+  @media screen and (min-width: 1280px) {
+  }
 }
 
 .services__text {
@@ -207,6 +232,10 @@
   @media screen and (min-width: 744px) {
     font-size: 24px;
   }
+  @media screen and (min-width: 1280px) {
+    max-width: 517px;
+  }
+
 }
 
 // TODO: Slider Navigation
@@ -260,7 +289,6 @@
     justify-content: start;
   }
 }
-
 
 .swiper-pagination {
   display: none;

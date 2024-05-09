@@ -6,6 +6,20 @@
 
   &.background {
     background-color: #181818;
+
+    & .menu__buttons--talk {
+      display: none;
+    }
+
+    & .menu__buttons--login {
+      display: flex;
+    }
+
+    @media screen and (min-width: 744px) {
+      & .menu__buttons--deals {
+        display: flex;
+      }
+    }
   }
 
   &__logo {
@@ -26,10 +40,21 @@
         width: 235px;
       }
     }
+    @media screen and (min-width: 1440px) {
+      margin-right: 64px;
+    }
+    @media screen and (min-width: 1728px) {
+      margin-right: 64px;
+    }
   }
 
   &__menu.marginLeftAuto {
     margin-left: auto;
+    @media screen and (min-width: 744px) {
+      & .menu__buttons--deals, & .menu__buttons--login {
+        display: none;
+      }
+    }
   }
 
   &__container {
@@ -93,14 +118,15 @@
         transform: rotate(180deg);
       }
 
-      .menu__link::before {
+
+      & .menu__link::before {
         content: "";
         display: block;
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: 0;
         height: 2px;
-        width: 0%;
+        width: 100%;
 
         border-radius: 31px;
         background: linear-gradient(90deg, #FFBC3B 30.89%, #FF4F40 60.43%, #AE1D6E 89.96%);
@@ -116,7 +142,7 @@
 
   &__list {
     display: flex;
-    gap: 56px;
+    gap: 32px;
     transition: opacity 1s linear;
     height: 100%;
     @include media(1440) {
@@ -124,6 +150,9 @@
     }
     @include media(1268) {
       display: none;
+    }
+    @media screen and (min-width: 1728px) {
+      gap: 56px;
     }
 
     &.hidden {
@@ -164,13 +193,12 @@
     gap: 9px;
     margin-left: auto;
 
-    &--talk {
+    &--talk, &--deals {
 
       &.hidden {
         display: none;
       }
 
-      display: none;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -199,9 +227,18 @@
       }
     }
 
+    &--talk {
+      display: flex;
+    }
+
+    &--deals {
+      display: none;
+    }
+
     &--login {
       transition: all 500ms ease;
       height: 40px;
+      display: none;
 
       &.hidden {
         display: flex;
@@ -210,7 +247,6 @@
         z-index: 9999;
       }
 
-      display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -231,6 +267,7 @@
       }
 
       @media screen and (min-width: 744px) {
+        display: flex;
         &.hidden {
           display: none;
           z-index: 1;
@@ -316,6 +353,7 @@
     display: none;
   }
 
+
   &__content {
     position: absolute;
     top: 50%;
@@ -362,7 +400,7 @@
   }
 
   &__link {
-
+    position: relative;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -385,7 +423,7 @@
 
   flex-direction: column;
   gap: 16px;
-  background: #1b1b1b;
+  background: #1B1B1B;
   padding: 24px;
   box-shadow: 0px 4px 12px 0px #00000040;
   border-radius: 8px;
@@ -398,11 +436,9 @@
   }
 
   @media screen and (min-width: 1280px) {
-    top: 60px;
+    top: 70px;
   }
-  @media screen and (min-width: 1700px) {
-    top: 80px;
-  }
+
 }
 
 .mobile-menu {
