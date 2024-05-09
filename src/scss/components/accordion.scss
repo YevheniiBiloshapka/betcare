@@ -47,20 +47,19 @@
       }
 
       & .accordion__content {
+        display: block;
         max-height: 100%;
         padding: 0 16px 16px 16px;
       }
 
       @media screen and (min-width: 744px) {
-          & .accordion__content {
-            padding: 0 24px 16px 24px;
-          }
+        & .accordion__content {
+          padding: 0 24px 16px 24px;
         }
       }
     }
-
-
   }
+
 
   &__header {
     position: relative;
@@ -117,9 +116,12 @@
     @media screen and (min-width: 1200px) {
       padding: 14px 24px;
     }
+
+
   }
 
   &__content {
+    display: none;
     max-height: 0;
 
     width: 100%;
@@ -135,6 +137,7 @@
 
     @media screen and (min-width: 1200px) {
       font-size: 18px;
+      padding: 0 24px 16px 24px;
     }
   }
 }
